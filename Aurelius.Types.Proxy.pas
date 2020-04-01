@@ -24,7 +24,7 @@ end;
 
 procedure Proxy<T>.SetInitialValue(const Value: T);
 begin
-
+  FValue := Value;
 end;
 
 end.
