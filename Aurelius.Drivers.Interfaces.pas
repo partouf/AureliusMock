@@ -13,6 +13,8 @@ type
 
   IDBResultSet = interface
     ['{DC0EEDF3-6C3A-4A82-8DB9-C07582F0B444}']
+
+    function GetFieldValue(const Idx: Integer): Variant;
   end;
 
   IDBStatement = interface

@@ -43,6 +43,10 @@ type
     Merge = 2,
     Remove = 3
   );
+
+  TEnumMappingType = (
+    emString
+  );
   {$SCOPEDENUMS OFF}
 
   TColumnProperties = set of TColumnProp;
@@ -83,6 +87,10 @@ type
   public
   end;
 
+  EnumerationAttribute = class(TCustomAttribute)
+  public
+    constructor Create(const MappingType: TEnumMappingType; const Values: string);
+  end;
 
 implementation
 
@@ -122,6 +130,11 @@ begin
 end;
 
 constructor JoinColumnAttribute.Create(const Fieldname: string; const Props: TColumnProperties; const OtherField: string);
+begin
+
+end;
+
+constructor EnumerationAttribute.Create(const MappingType: TEnumMappingType; const Values: string);
 begin
 
 end;
