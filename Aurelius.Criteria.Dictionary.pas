@@ -9,8 +9,12 @@ type
   end;
 
   TDictionaryAssociation = class
+  private
+    FAssociationName: string;
   public
     constructor Create(const Value: string);
+
+    property AssociationName: string read FAssociationName write FAssociationName;
   end;
 
 implementation
@@ -26,7 +30,7 @@ end;
 
 constructor TDictionaryAssociation.Create(const Value: string);
 begin
-
+  FAssociationName := Value;
 end;
 
 end.
